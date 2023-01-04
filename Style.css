@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+}
+
+:root{
+    --blue: #007ACC;
+    --white: #D6DBE9;
+    --purple: #293955;
+    --black1: #272721;
+    --black2: #FFF29D;
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: var(--black2);
+}
+
+.navigation{
+    position: fixed;
+    width: 15%;
+    height: 100%;
+    background: var(--purple);
+    border-left: 10px solid var(--purple);
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.navigation.active{
+    width: 6%;
+}
+
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered{
+    background: var(--black1);
+}
+
+.navigation ul li:nth-child(1){
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--black1);
+}
+
+.navigation ul li:hover a,
+.navigation ul li.hovered a{
+    color: var(--white);
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 75px;
+    text-align: center;
+}
+
+.navigation ul li a .icon ion-icon{
+    font-size: 1.75em;
+}
+
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -40px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 25px 25px 0 5px var(--black1);
+}
+
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after
+{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 25px -25px 0 5px var(--black1);
+}
+
+/*Main*/
+.main{
+    position: absolute;
+    width: calc(100% - 15%);
+    left: 15%;
+    min-height: 100vh;
+    background: var(--black2);
+}
+
+.main.active{
+    width: calc(100% - 6%);
+    left: 6%;
+    transition: 0.5s all;
+}
+
+.topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    cursor: pointer;
+    color: var(--white);
+}
+
+.user{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    cursor: pointer;
+    color: var(--white);
+}
+
+/*----------------------------------------------------------------------------------*/
+/*---------------------------------------Forms--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+.formContainer{
+    height: 420px;
+    width: 80%;
+    background: var(--white);
+    border-radius: 16px;
+    padding: 25px 30px;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.formContainer .formTitle{
+    font-size: 30px;
+    font-weight: 300;
+    position: relative;
+}
+
+.formContainer .formTitle::before{
+    content: '';
+    margin-top: 4px;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 3px;
+    width: 100%;
+    background: var(--blue);
+}
+
+.formContainer form .box-detail{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form .box-detail .input-box{
+    margin: 20px 0 12px 0;
+    width: calc(100% / 2 - 20px);
+}
+
+.box-detail .input-box .detail{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.box-detail .input-box input{
+    height: 35px;
+    width: 100%;
+    outline: none;
+    border-radius: 8px;
+    border: 1px	solid var(--black2);
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.box-detail .input-box input:focus,
+.box-detail .input-box input:valid{
+    border-color: var(--blue);
+}
+
+form .buttons{
+    height: 25%;
+    width: 25%;
+    margin: 8px;
+    margin-left: 35%;
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Primary-Button{
+    width: 90%;    
+    padding: 10px 0;
+    background: #6fd649;
+    color: var(--black1);
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(255, 255, 255, 0.18);
+}
+
+.Secondary-Button{
+    width: 90%;    
+    padding: 10px 0;
+    background: #e64949;
+    color: var(--black1);
+    margin-left: 16px;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(255, 255, 255, 0.18);
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------Modal---------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+
+.popup{
+    width: 400px;
+    background: var(--black1);
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1) ;
+    text-align: center;
+    padding: 0 30px 30px;
+    color: var(--white);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.openPopup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1) ;
+}
+
+.popup ion-icon{
+    font-size: 100px;
+    color: green;
+    margin-top: -50px;
+}
+
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.popup button{
+    width: 100%;
+    margin-top: 50px;
+}

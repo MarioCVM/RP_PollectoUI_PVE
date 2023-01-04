@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <section class="main-container">
+
+        <aside>
+            <section class="top">
+                <a href="index.html" id="0" onclick="SaveLink(0)">
+                    <div class="logo">
+                        <ion-icon name="egg" class="ico"></ion-icon>
+                        <h2>Poyecto</h2>
+                    </div>
+                    <div class="close" id="btn_Close">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </div>
+                </a>
+            </section>
+
+            <section class="sidebar">
+                <a href="index.html" id="1" onclick="SaveLink(1)">
+                    <ion-icon name="stats-chart"></ion-icon>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="produccion.html" id="2" onclick="SaveLink(2)">
+                    <ion-icon name="clipboard"></ion-icon>
+                    <h3>Produccion</h3>
+                </a>
+                <a href="galera.html" id="3" onclick="SaveLink(3)">
+                    <ion-icon name="storefront"></ion-icon>
+                    <h3>Galera</h3>
+                </a>
+                <a href="alimentos.html" id="4" onclick="SaveLink(4)">
+                    <ion-icon name="bag"></ion-icon>
+                    <h3>Alimentos</h3>
+                </a>
+                <a href="#">
+                    <ion-icon name="file-tray-stacked"></ion-icon>
+                    <h3>Tareas</h3>
+                </a>
+                <a href="tratamiento.html" id="5" onclick="SaveLink(5)">
+                    <ion-icon name="medkit"></ion-icon>
+                    <h3>Tratamiento</h3>
+                </a>
+                <a href="usuarios.html" id="6" onclick="SaveLink(6)">
+                    <ion-icon name="people"></ion-icon>
+                    <h3>Usuarios</h3>
+                </a>
+                <a href="login.html">
+                    <ion-icon name="log-in"></ion-icon>
+                    <h3>Salir</h3>
+                </a>
+            </section>
+        </aside>
+
+        <main>
+            <div class="mainHeader">
+                <div class="Title">
+                    <h1>Usuarios</h1>
+                </div>
+                <div class="themeChange" id="btn_Theme">
+                    <div class="active">
+                        <ion-icon name="sunny"></ion-icon>
+                    </div>
+                    <div>
+                        <ion-icon name="moon"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <div class="colum2">
+                <div class="box">
+                    <h3 class="dl-header">Usuario Actual</h3>
+                    <ul class="datalist">
+                        <li class="container colum6">
+                            <div hidden>id</div>
+                            <div>Juan</div>
+                            <div>Admin</div>
+                            <div>jaun@admin.pp</div>
+                            <div>password</div>
+                            <div>+505 58545698</div>
+                            <button class="Link-Button">Edit</button>
+                        </li>
+                    </ul>
+
+                    <h3 class="dl-header">Usuarios</h3>
+
+                    <ul class="datalist">
+                        <li class="container colum6">
+                            <div hidden>id</div>
+                            <div>Juan</div>
+                            <div>Admin</div>
+                            <div>jaun@admin.pp</div>
+                            <div>password</div>
+                            <div>+505 58545698</div>
+                            <button class="Link-Button">Edit</button>
+                        </li>
+                        <li class="container colum6">
+                            <div hidden>id</div>
+                            <div>Pedro</div>
+                            <div>Secretario</div>
+                            <div>jaun@admin.pp</div>
+                            <div>password</div>
+                            <div>+505 58545698</div>
+                            <button class="Link-Button">Edit</button>
+                        </li>
+                        <li class="container colum6">
+                            <div hidden>id</div>
+                            <div>Pablo</div>
+                            <div>trabajador</div>
+                            <div>jaun@admin.pp</div>
+                            <div>password</div>
+                            <div>+505 58545698</div>
+                            <button class="Link-Button">Edit</button>
+                        </li>
+                        <li class="container colum6">
+                            <div hidden>id</div>
+                            <div>Judas</div>
+                            <div>trabajador</div>
+                            <div>jaun@admin.pp</div>
+                            <div>password</div>
+                            <div>+505 58545698</div>
+                            <button class="Link-Button">Edit</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="box">
+                    <div class="formContainer">
+                        <div class="formTitle">Nuevo Cargo</div>
+                        <form action="#">
+                            <div class="box-detail">
+                                <div hidden>
+                                    <input type="number" id="CargoId" />
+                                </div>
+                                <div class="input-box">
+                                    <span class="detail">Cargo</span>
+                                    <input type="text" placeholder="Ingrese el Nombre de la Galera" required>
+                                </div>
+                            </div>
+
+                            <div class="buttons">
+                                <input class="Primary-Button" type="submit" value="Registrar" onclick="openPopup()">
+                                <input class="Secondary-Button" type="submit" value="Cancelar">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="formContainer">
+                        <div class="formTitle">Nuevo Usuario</div>
+                        <form action="#">
+                            <div class="box-detail">
+                                <div hidden>
+                                    <input type="number" id="UsuarioId" />
+                                </div>
+                                <div class="input-box">
+                                    <span class="detail">Nombre</span>
+                                    <input type="text" placeholder="Ingrese el Nombre del Usuario" required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="detail">Cargo</span>
+                                    <select class="input" id="alimMarca" required>
+                                        <option value="0">
+                                            Marcas
+                                        </option>
+                                        <option value="1">
+                                            Admin
+                                        </option>
+                                        <option value="2">
+                                            Trabajador
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="input-box">
+                                    <span class="detail">Correo</span>
+                                    <input type="email" placeholder="Ingrese el Correo" required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="detail">Contraseña</span>
+                                    <input type="password" placeholder="Ingrese la Contraseña" required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="detail">Verifique la Contraseña</span>
+                                    <input type="password" placeholder="Ingrese la Contraseña" required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="detail">Numero de Telefono</span>
+                                    <input type="tel" placeholder="Ingrese el Numero de Telefono" required>
+                                </div>
+                            </div>
+
+                            <div class="buttons">
+                                <input class="Primary-Button" type="submit" value="Registrar" onclick="openPopup()">
+                                <input class="Secondary-Button" type="submit" value="Cancelar">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </main>
+
+    </section>
+
+
+
+    <!--Icon Scripts-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/5c31cb0316.js" crossorigin="anonymous"></script>
+
+    <!--Function Scripts-->
+    <script src="taskScript.js"></script>
+    <script src="activeLink.js"></script>
+    <script src="changeTheme.js"></script>
+</body>
+
+</html>

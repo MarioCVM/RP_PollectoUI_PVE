@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <main>
+        <div class="mainHeader">
+            <div class="Title">
+                <h1>Alimentos</h1>
+
+                <div class="date">
+                    <input type="date">
+                </div>
+            </div>
+            <div class="themeChange" id="btn_Theme">
+                <div class="active">
+                    <ion-icon name="sunny"></ion-icon>
+                </div>
+                <div>
+                    <ion-icon name="moon"></ion-icon>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="colum2">
+            <div class="box">
+                <div class="container">
+                    <h3 class="datatable-header">Marca Alimentos</h3>
+                    <div class="box scrollable table-medium">
+                        <table class="datatable" id="juan">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Marca</th>
+                                    <th>Descripcion</th>                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="formContainer">
+                    <div class="formTitle">Nuevo Marca</div>
+                    <form action="#">
+                        <div class="box-detail">
+                            <div class="input-box">
+                                <span class="detail">Nombre Alimento</span>
+                                <input type="text" placeholder="Ingrese el Nombre de la Galera" required id="nom">
+                            </div>
+                            <div class="input-box">
+                                <span class="detail">Marca</span>
+                                <select class="input" id="alimMarca">
+                                    <option value="1">
+                                        Marcas
+                                    </option>
+                                    <option value="2">
+                                        Juan
+                                    </option>
+                                    <option value="3">
+                                        Pablo
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="input-box">
+                                <span class="detail">Descripcion</span>
+                                <input type="text" placeholder="Ingrese una breve descripcion" required id="des">
+                            </div>
+                        </div>
+
+                        <div class="buttons">
+                            <input class="Primary-Button" type="submit" value="agregar" style="width: 100%;"
+                                id="btnAdd">
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </main>
+
+    <script src="changeTheme.js"></script>
+
+    <script type="module">
+        import addNewTask from "../agregar.js";
+
+        btnAdd.onclick = async () => {
+
+            const articulo = {
+                nombre: nom.value,
+                marca: alimMarca.value,
+                descripcion: des.value
+            }
+            addNewTask(articulo, juan);
+        }
+    </script>
+</body>
+
+</html>

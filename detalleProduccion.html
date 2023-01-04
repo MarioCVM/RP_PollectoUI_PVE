@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="changeTheme.js"></script>
+</head>
+
+<body>
+    <section class="main-container">
+
+        <aside>
+            <section class="top">
+                <a href="index.html" id="0" onclick="SaveLink(0)">
+                    <div class="logo">
+                        <ion-icon name="egg" class="ico"></ion-icon>
+                        <h2>Poyecto</h2>
+                    </div>
+                    <div class="close" id="btn_Close">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </div>
+                </a>
+            </section>
+
+            <section class="sidebar">
+                <a href="index.html" id="1" onclick="SaveLink(1)">
+                    <ion-icon name="stats-chart"></ion-icon>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="produccion.html" id="2" onclick="SaveLink(2)">
+                    <ion-icon name="clipboard"></ion-icon>
+                    <h3>Produccion</h3>
+                </a>
+                <a href="galera.html" id="3" onclick="SaveLink(3)">
+                    <ion-icon name="storefront"></ion-icon>
+                    <h3>Galera</h3>
+                </a>
+                <a href="alimentos.html" id="4" onclick="SaveLink(4)">
+                    <ion-icon name="bag"></ion-icon>
+                    <h3>Alimentos</h3>
+                </a>
+                <a href="#">
+                    <ion-icon name="file-tray-stacked"></ion-icon>
+                    <h3>Tareas</h3>
+                </a>
+                <a href="tratamiento.html" id="5" onclick="SaveLink(5)">
+                    <ion-icon name="medkit"></ion-icon>
+                    <h3>Tratamiento</h3>
+                </a>
+                <a href="usuarios.html" id="6" onclick="SaveLink(6)">
+                    <ion-icon name="people"></ion-icon>
+                    <h3>Usuarios</h3>
+                </a>
+                <a href="login.html">
+                    <ion-icon name="log-in"></ion-icon>
+                    <h3>Salir</h3>
+                </a>
+            </section>
+        </aside>
+
+        <main>
+            <div class="mainHeader">
+                <div class="Title">
+                    <h1>Detalle Produccion</h1>
+                </div>
+                <div class="themeChange" id="btn_Theme">
+                    <div class="active">
+                        <ion-icon name="sunny"></ion-icon>
+                    </div>
+                    <div>
+                        <ion-icon name="moon"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="colum2">
+                <div class="box Center">
+                    <div class="cardDetail">
+                            <div class="row">
+                                <div class="NumProd Center">
+                                    <div class="squer squer-active left"></div>
+                                    <span>758</span>
+                                </div>
+                                <ul class="details">
+                                    <li><span>Fecha Inicio: 15/06/22</span></li>
+                                    <li><span>Fecha Fin: 16/09/22</span></li>
+                                    <li><span>Estado: En Produccion</span></li>
+                                    <li><span>Pollos Ingresados: 100</span></li>
+                                    <li><span>Galera: Galera 3</span></li>
+                                    <li><span>Tasa de Mortalidad/Decesos: 6%/6</span></li>
+                                    <li><span>Tratamientos: <a class="link" href="detalleTratamiento.html">Ver Detaller...</a></span></i></li>
+                                    <li><span>Alimentos: Purina, Purina2</span></li>
+                                    <li><span>Cant. Alimentos: 300lbs</span></li>
+                                    <li><span>Estado: En Produccion</span></li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="formContainer">
+                        <div class="dateTask">
+                            <div class="date-left">
+                                <div id="date-number"></div>
+                                <div>
+                                    <div id="datemonth"></div>
+                                    <div id="dateyear"></div>
+                                </div>
+                            </div>
+                            <div id="dateday"></div>
+                        </div>
+                        <form class="task" onsubmit="addNewTask(event)">
+                            <div class="box-detail">
+                                <div class="input-box">
+                                    <input type="text" name="taskTitle" autocomplete="off" placeholder="Nueva Tarea">
+                                    <button type="submit" class="btn_addTask">+</button>
+                                    <button type="button" class="Link-Button"
+                                        onclick="renderOrderedTasks()">Ordenar</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="tasklist"></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </main>
+
+    </section>
+
+
+
+    <!--Icon Scripts-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!--Function Scripts-->
+    <script src="taskScript.js"></script>
+    <script src="activeLink.js"></script>
+</body>
+
+</html>
