@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espacie</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <section class="main-container">
+
+        <aside>
+            <section class="top">
+                <a href="index.html" id="0" onclick="SaveLink(0)">
+                    <div class="logo">
+                        <ion-icon name="egg" class="ico"></ion-icon>
+                        <h2>Poyecto</h2>
+                    </div>
+                    <div class="close" id="btn_Close">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </div>
+                </a>
+            </section>
+
+            <section class="sidebar">
+                <a href="index.html" id="1" onclick="SaveLink(1)">
+                    <ion-icon name="stats-chart"></ion-icon>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="produccion.html" id="2" onclick="SaveLink(2)">
+                    <ion-icon name="clipboard"></ion-icon>
+                    <h3>Produccion</h3>
+                </a>
+                <a href="galera.html" id="3" onclick="SaveLink(3)">
+                    <ion-icon name="storefront"></ion-icon>
+                    <h3>Galera</h3>
+                </a>
+                <a href="alimentos.html" id="4" onclick="SaveLink(4)">
+                    <ion-icon name="bag"></ion-icon>
+                    <h3>Alimentos</h3>
+                </a>
+                <a href="especie.html" id="4" onclick="SaveLink(4)">
+                    <ion-icon name="egg"></ion-icon>
+                    <h3>Espacie</h3>
+                </a>
+                <a href="#">
+                    <ion-icon name="file-tray-stacked"></ion-icon>
+                    <h3>Tareas</h3>
+                </a>
+                <a href="tratamiento.html" id="5" onclick="SaveLink(5)">
+                    <ion-icon name="medkit"></ion-icon>
+                    <h3>Tratamiento</h3>
+                </a>
+                <a href="usuarios.html" id="6" onclick="SaveLink(6)">
+                    <ion-icon name="people"></ion-icon>
+                    <h3>Usuarios</h3>
+                </a>
+                <a href="login.html">
+                    <ion-icon name="log-in"></ion-icon>
+                    <h3>Salir</h3>
+                </a>
+            </section>
+        </aside>
+
+        <main>
+            <div class="mainHeader">
+                <div class="Title">
+                    <h1>Espacie</h1>
+
+                    <div class="date">
+                        <input type="date">
+                    </div>
+                </div>
+                <div class="themeChange" id="btn_Theme">
+                    <div class="active">
+                        <ion-icon name="sunny"></ion-icon>
+                    </div>
+                    <div>
+                        <ion-icon name="moon"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="colum2">
+                <div class="box">
+                    <div class="container">
+                        <h3 class="datatable-header">Especies</h3>
+                        <div class="box scrollable table-medium">
+                            <table class="datatable">
+                                <thead>
+                                    <tr>
+                                        <th>Nº</th>
+                                        <th>Nombre</th>
+                                        <th>Descripcion</th>
+                                        <th>Pais O.</th>
+                                        <th>P. Unitario</th>
+                                        <th>Sem. Prod.</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Erika</td>
+                                        <td>Pollito de color pendjo que no dura vivo</td>
+                                        <td>Guyana</td>
+                                        <td>5</td>
+                                        <td>53</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Derek</td>
+                                        <td>Pollo quemado antes de ser cocinado</td>
+                                        <td>Surinam</td>
+                                        <td>25</td>
+                                        <td>6</td>
+                                    </tr>       
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Posho Foshador</td>
+                                        <td>Se coje hasta las chancla, Fuckun Fuckun</td>
+                                        <td>Amsterdam</td>
+                                        <td>85</td>
+                                        <td>8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Elian</td>
+                                        <td>Cobra diesmo</td>
+                                        <td>Vaticano</td>
+                                        <td>99999999.99</td>
+                                        <td>8</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box">                    
+                    <div class="formContainer">
+                        <div class="formTitle">Nuevo Marca</div>
+                        <form action="#">
+                            <div class="box-detail">
+                                <div hidden>
+                                    <input type="number" id="galeraId" />
+                                </div>
+                                <div class="input-box">
+                                    <span class="detail">Nombre Especie</span>
+                                    <input type="text" placeholder="Ingrese el Nombre de la Galera" required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="detail">Descripcion</span>
+                                    <input type="number" placeholder="Ingrese el Largo de la Galera" required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="detail">Pais de Origen</span>
+                                    <input type="number" placeholder="Ingrese el Ancho de la Galera" required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="detail">Precio Unitario</span>
+                                    <input type="number" placeholder="Ingrese Capacidad de la Galera" required>
+                                </div>
+                                <div class="input-box">
+                                    <span class="detail">Semanas de Produccion</span>
+                                    <input type="text" placeholder="Ingrese la Latitud" required>
+                                </div>                                
+                            </div>
+
+                            <div class="buttons">
+                                <input class="Primary-Button" type="submit" value="Registrar" onclick="openPopup()">
+                                <input class="Secondary-Button" type="submit" value="Cancelar">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+        </main>
+
+    </section>
+
+
+
+    <!--Icon Scripts-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/5c31cb0316.js" crossorigin="anonymous"></script>
+
+    <!--Function Scripts-->
+    <script src="taskScript.js"></script>
+    <script src="activeLink.js"></script>
+    <script src="changeTheme.js"></script>
+</body>
+
+</html>

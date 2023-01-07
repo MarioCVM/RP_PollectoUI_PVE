@@ -966,7 +966,6 @@ form .box-detail .margin-top{
 }
 
 .input-box .squer{
-    width: 8px;
-    height: 8px;
+    border: solid #000 2px;
 }
 
